@@ -52,10 +52,11 @@ model Food {
     id          Int           @id @default(autoincrement())
     name        String
     price       Float
-    description  String
+    description String
     image       String
     discount    Float
     categoryId  Int
+    rating      Float
     Favorite    Favorite[]
     Category    Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
     Review      Review[]
@@ -87,11 +88,11 @@ model Review {
 }
 
 model Transaction {
-    id     Int   @id @default(autoincrement())
+    id     Int    @id @default(autoincrement())
     userId Int
     foodId Int
     cost   Float
-    user   User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+    user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
     food   Food[]
 }
 
