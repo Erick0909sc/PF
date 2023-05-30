@@ -43,7 +43,6 @@ model User {
     image         String
     Accounts      Account[]
     Sessions      Session[]
-    Food          Food[]
     Favorite      Favorite[]
     Review        Review[]
     Transaction   Transaction[]
@@ -52,16 +51,13 @@ model User {
 model Food {
     id          Int           @id @default(autoincrement())
     name        String
-    price       String
-    decription  String
+    price       Float
+    description  String
     image       String
     discount    Float
     categoryId  Int
-    reviewedId  Int
-    userId      Int
-    user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
     Favorite    Favorite[]
-    Category    Category[]
+    Category    Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
     Review      Review[]
     Transaction Transaction[]
 }
@@ -75,10 +71,9 @@ model Favorite {
 }
 
 model Category {
-    id     Int    @id @default(autoincrement())
-    name   String
-    foodId Int
-    food   Food   @relation(fields: [foodId], references: [id], onDelete: Cascade)
+    id   Int    @id @default(autoincrement())
+    name String
+    food Food[]
 }
 
 model Review {
@@ -97,11 +92,11 @@ model Transaction {
     foodId Int
     cost   Float
     user   User  @relation(fields: [userId], references: [id], onDelete: Cascade)
-    food   Food  @relation(fields: [foodId], references: [id], onDelete: Cascade)
+    food   Food[]
 }
 
 enum Roles {
-    user 
+    user
     admin
     employed
 }
