@@ -50,6 +50,7 @@ CREATE TABLE "Food" (
     "image" TEXT NOT NULL,
     "discount" DOUBLE PRECISION NOT NULL,
     "categoryId" INTEGER NOT NULL,
+    "rating" DOUBLE PRECISION NOT NULL,
 
     CONSTRAINT "Food_pkey" PRIMARY KEY ("id")
 );
