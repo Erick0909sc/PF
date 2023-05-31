@@ -2,4 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico.ttf");
+}
 
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope.ttf");
+}
+
+@font-face {
+  font-family: "Josefin";
+  src: url("../fonts/JosefinSans.ttf");
+}
