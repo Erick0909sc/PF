@@ -1,18 +1,29 @@
-/** @type {import('tailwindcss').Config} */
+/**  @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/**/*.{js,ts,jsx,tsx}',
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        color1: "#4D455D",
+        color2: "#E96479",
+        color3: "#F5E9CF",
+        color4: "#7DB9B6",
+      },
+      fontFamily: {
+        pacifico: ["Pacifico"],
+        manrope: ["Manrope"],
+        josefin: ["Josefin"],
       },
     },
   },
   plugins: [],
-}
+};
