@@ -1,6 +1,8 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../img/logo-tasty.png";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center content-center justify-center w-screen h-screen bg-color3">
