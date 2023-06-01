@@ -36,11 +36,11 @@ model Session {
 
 model User {
     id            Int           @id @default(autoincrement())
-    name          String
+    name          String?
     email         String        @unique
     emailVerified DateTime?
     password      String
-    image         String
+    image         String?
     Accounts      Account[]
     Sessions      Session[]
     Favorite      Favorite[]

@@ -1,9 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import Logo from "../img/logo-tasty.png";
+
 import Google from "../img/google.png";
 import Facebook from "../img/facebook.png";
 import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/solid";
+
+
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
+import GoogleLogin from "@/Components/GoogleLogin";
 
 export default function Login() {
   return (
@@ -41,9 +46,13 @@ export default function Login() {
             ></input>
           </div>
         </div>
+
         <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
           Entrar
         </button>
+
+        <GoogleLogin />
+
       </form>
       <div className="flex justify-around w-full mt-5">
         <div className="inline-flex">
