@@ -1,13 +1,12 @@
-import Image from "next/image";
 import React from "react";
 import Logo from "../img/logo-tasty.png";
 
+import Image from "next/image";
 import Google from "../img/google.png";
 import Facebook from "../img/facebook.png";
+
 import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/solid";
 
-
-import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import GoogleLogin from "@/Components/GoogleLogin";
 
 export default function Login() {
@@ -52,7 +51,6 @@ export default function Login() {
         </button>
 
         <GoogleLogin />
-
       </form>
       <div className="flex justify-around w-full mt-5">
         <div className="inline-flex">
